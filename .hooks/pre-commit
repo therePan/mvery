@@ -1,0 +1,26 @@
+#!/bin/sh
+files=$(git diff --cached --name-only --diff-filter=ACM | grep "src\/.*\.jsx\{0,1\}$")
+joinFiles=""
+i=0
+failed=0
+for file in ${files}; do
+  let i=$i+1
+  joinFiles="$joinFiles $file"
+  if [[ $i == 20 ]]; then
+    node_modules/.bin/eslint --max-warnings 0 $joinFiles
+    if [[ $failed != 0 ]]; then
+      failed=$?
+    fi
+    joinFiles=""
+    i=0
+  fi
+done;
+if [[ $joinFiles != "" ]]; then
+  node_modules/.bin/eslint --max-warnings 0 $joinFiles
+  failed=$?
+fi
+
+if [[ $failed != 0 ]]; then
+    echo "\n❌  \033[31m ESLint failed, git commit denied \033[0m"
+    exit $failed
+fi

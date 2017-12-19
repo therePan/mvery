@@ -1,0 +1,40 @@
+.HomePageWrap{
+  padding-top: 100px;
+  //-webkit-overflow-scrolling: touch;
+}
+.postList{
+  padding-bottom: 1rem;
+  >div{
+    >div:nth-child(1){
+      border-top: 0;
+    }
+  }
+}
+.header{
+  background-color: #fff;
+  height: 200px;
+  width: 100%;
+}
+.searchBar{
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100px;
+  width: 100%;
+  z-index: 10;
+}
+.listView{
+  >div{
+    >div:nth-child(2){
+      padding: 0;
+    }
+  }
+}
+
+.listitem:after{
+  content: '';
+  height: 20px;
+  width: 100%;
+  display: block;
+  background-color: #f5f5f9;
+}

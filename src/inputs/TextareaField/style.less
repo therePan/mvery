@@ -1,0 +1,21 @@
+.root, .wrap, .all  {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+
+.wrap, .all {
+  flex-grow: 1;
+  height: 0;
+}
+
+.all {
+  overflow: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.root {
+  height: 100%;
+  text-align: left;
+  overflow: hidden;
+}

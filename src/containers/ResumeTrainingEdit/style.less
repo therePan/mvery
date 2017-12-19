@@ -1,0 +1,41 @@
+.root {
+  height: 100%;
+}
+
+.wrap {
+  height: 0;
+  overflow: auto;
+  -webkit-overflow-scrolling: touch;
+  margin-left: 0 !important;
+  > div {
+    // margin: 40px 20px;
+  }
+}
+
+.checkbox {
+  margin-top: -1PX;
+  :global {
+    .am-list-content {
+      display: flex;
+      flex-direction: row-reverse;
+      > label {
+        display: flex;
+        align-items: center;
+        > span {
+          margin-right: 16px;
+        }
+      }
+    }
+  }
+}
+
+.nav {
+  :global {
+    .am-navbar-right {
+      span {
+        padding: 24px;
+        margin-right: -24px;
+      }
+    }
+  }
+}

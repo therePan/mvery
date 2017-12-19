@@ -1,0 +1,58 @@
+.ForMassageWrap{
+  background-color: #fff;
+  padding: 40px 40px 60px 40px;
+  color: #777777;
+  font-size: 28px;
+  .title{
+    color: #4A4A4A;
+    font-size: 32px;
+  }
+  .container{
+    background-color: #FEE7D7;
+    padding: 40px 24px;
+    margin: 40px 0;
+    border-radius: 16px;
+    .conntent{
+      line-height: 1.6;
+      max-height: 180px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      -webkit-box-orient: vertical;
+      -webkit-line-clamp: 4;
+    }
+    .btn{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding-top: 20px;
+      width: 100%;
+      img{
+        width: 24px;
+        margin-right: 24px;
+      }
+    }
+  }
+  .comapnyNmae{
+    text-align: right;
+    margin-bottom: 20px;
+  }
+  .data{
+    text-align: right;
+  }
+}
+.more{
+  max-height: none !important;
+  height: auto !important;
+  overflow: auto !important;
+  display: block !important;
+  //-webkit-box-orient: inherit !important;
+  //-webkit-line-clamp: auto !important;
+}
+.up{
+  transform: rotate(0deg);
+  transition: all .4s;
+}
+.down{
+  transform: rotate(180deg);
+  transition: all .4s;
+}

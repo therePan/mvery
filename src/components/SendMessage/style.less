@@ -1,0 +1,52 @@
+.content {
+  width: 100%;
+  background-color: #fff;
+  padding: 14px 40px;
+  box-sizing: border-box;
+  min-height: 72px;
+  position: relative;
+  overflow: hidden;
+  &:after {
+    clear: both;
+    content: "";
+    display: block;
+  }
+  .inputCon {
+    width: 86%;
+    overflow-x:hidden; 
+     .input {
+      resize: none;
+      font-size: 26px;
+      line-height: 36px;
+      word-wrap: break-word;
+      white-space: pre-wrap;
+      width: 100%;
+      padding: 18px 0 18px 20px;
+      box-sizing: border-box;
+    }
+    textarea {
+      height: 72px;
+      background-color: #E2E2E2;
+      border: 0;
+      border-radius: 16px;
+    }
+    pre {
+      visibility: hidden;
+      position: absolute;
+      z-index: -1;
+      min-height: 72px;
+      max-height: 144px;
+    }
+    ::-webkit-input-placeholder{color:#9B9B9B;}
+  }
+  .sendCon {
+    float: right;
+    font-size: 32px;
+    line-height: 44px;
+    text-align: right;
+    position: absolute;
+    right: 40px;
+    bottom: 30px;
+    color: #FF7214;
+  }
+}

@@ -1,0 +1,53 @@
+.hotelEntry {
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  padding: 30px 40px;
+  display: block;
+  background-color: #fff;
+  margin-top: 20px;
+  &:after {
+    content: '';
+    clear: both;
+    display: block;
+  }
+  .left {
+    width: 120px;
+    height: 120px;
+    line-height: 120px;
+    float: left;
+    img {
+      width: 100%;
+    }
+  }
+  .center {
+    width: calc(~'100% - 200px');
+    margin-left: 40px;
+    float: left;
+    .hotelName {
+      width: 100%;
+      margin-top: 25px;
+      font-size: 30px;
+      color: #333;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow:ellipsis;
+    }
+    .hotelSize {
+      width: 280px;
+      overflow: hidden;
+      text-overflow:ellipsis; 
+      font-size: 24px;
+      color: #AAA;
+      white-space: nowrap;
+      margin-top: 8px;
+    }
+  }
+  .right {
+    float: right;
+    img {
+      width: 28px;
+      margin-top: 0.45rem;
+    }
+  }
+} 

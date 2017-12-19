@@ -1,0 +1,60 @@
+// 清酒稻香
+@import "~antd-mobile/lib/style/index.less";
+@import "~antd-mobile/lib/style/components.less";
+
+
+@font-size-heading: 28px;
+@input-label-width: 28px;
+@input-font-size: 28px;
+@font-size-caption: 28px;
+@link-button-font-size: 28px;
+@color-text-base: #777;
+@color-text-secondary: #a4a9b0;
+@brand-primary: #FF4F00;
+@brand-primary-tap: #ff6523;
+
+// ---
+.am-accordion .am-accordion-item .am-accordion-header {
+  padding-left: 60px;
+
+  &:after {
+    width: calc(~"100% - 120px");
+    left: 60px;
+  }
+
+  i {
+    right: 60px;
+  }
+}
+
+.am-list-item {
+  padding-left: 60px;
+}
+
+
+.am-badge {
+  line-height: inherit;
+}
+
+.am-navbar .am-navbar-left .am-icon-left {
+  width: 54px;
+  height: 54px;
+}
+
+.am-list-item.am-input-item {
+  padding-left: 60px;
+}
+.am-list-item.am-input-item:after {
+  left: 60px;
+}
+
+.am-input-item {
+  > .am-input-control {
+    > input {
+      text-align: right;
+    }
+  }
+  > .am-input-clear {
+    margin-left: 5px;
+  }
+}

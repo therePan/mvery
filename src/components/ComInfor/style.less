@@ -1,0 +1,45 @@
+.content {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 40px;
+  background: #fff;
+}
+.title {
+  font-size: 32px;
+  color: #333;
+  height: 44px;
+  line-height: 44px;
+}
+.content ul {
+  width: 100%;
+  div {
+    overflow: hidden;
+    &:after {
+      content: "";
+      clear: both;
+      display: block;
+    }
+  }
+  li {
+    margin-top: 20px;
+    padding-left: 40px;
+    color: #4A4A4A;
+    font-size: 28px;
+    line-height: 40px;
+  }
+  .first {
+    float: left;
+    background: url(../../static/companyType@3x.png) no-repeat left center/ 32px 32px;
+  }
+  .second {
+    float: left;
+    margin-left: 20px;
+    background: url(../../static/personNum@3x.png) no-repeat left center/ 34px 32px;
+  }
+  .third {
+    background: url(../../static/comnature@3x.png) no-repeat left center/ 30px 36px;
+  }
+  .fourth {
+    background: url(../../static/select@3x.png) no-repeat left center/ 32px 32px;
+  }
+}

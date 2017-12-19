@@ -1,0 +1,43 @@
+.content {
+  width: 100%;
+  background: #fff;
+  margin-top: 20px;
+  box-sizing: border-box;
+  padding: 0 60px 30px;
+  overflow: hidden;
+}
+.top {
+  width: 100%;
+  border-bottom: 1px solid #C8C7CC;
+  line-height: 85px;
+  margin-top: 17px;
+  height: 85px;
+  color: #4A4A4A;
+  font-size: 30px;
+  background: url(../../static/recommen3x.png) left center/44px 44px no-repeat;
+  text-indent: 2em;
+} 
+.bottom {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  li {
+    width: 148px;
+    height: 48px;
+    border-radius: 14px;
+    border: 1px solid #C8C7CC;
+    line-height: 48px;
+    font-size: 26px;
+    text-align: center;
+    color: #777;
+    margin-top: 30px;
+    margin-right: 88px;
+    &:nth-child(3n) {
+      margin-right: 0
+    }
+  }
+  .choosed {
+    border-color: #FF7214;
+    color: #FF7214;
+  }
+}

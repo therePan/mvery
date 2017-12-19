@@ -1,0 +1,147 @@
+.root, .wrap, .all  {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+
+.wrap, .all {
+  flex-grow: 1;
+  height: 0;
+}
+
+.all {
+  overflow: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.root {
+  height: 100%;
+  text-align: left;
+  overflow: hidden;
+
+  :global {
+    // list ---------
+    .am-list-line {
+      padding-right: 60px;
+    }
+    .am-list-body {
+      margin-top: -1PX;
+      div:not(:last-child) .am-list-line:after {
+        width: calc(~"100% - 60px");
+      }
+    }
+    .am-list-content  {
+      display: flex;
+      flex-grow: 1;
+      white-space: normal !important;
+      > span {
+        flex-grow: 1;
+        margin: 0 16px;
+        width: 0;
+        &:last-child {
+          margin-right: 0;
+        }
+      }
+    }
+
+    // Icon -----------
+    .arrow {
+      display: none !important;
+    }
+    .arrow-i {
+      width: 22px;
+      height: 36px;
+      margin: 0;
+    }
+    .am-accordion-item-active {
+      .arrow-i {
+        margin: 6px 0 0 0;
+        transform: rotate(180deg);
+      }
+    }
+  }
+}
+
+.nav {
+  :global {
+    .am-icon-left {
+      width: 54px;
+      height: 54px;
+    }
+  }
+}
+
+// listItem ------------
+// .listItem {
+// }
+
+// optView ------------
+.optView {
+  :global {
+    .arrow-i {
+      width: 30px;
+      height: 30px;
+      margin: -10px 0 0 0;
+    }
+  }
+}
+.arrow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  >:first-child {
+    flex-grow: 1,
+  }
+}
+.num {
+  margin-right: 16px;
+  slot {
+    color: #FF7214;
+  }
+}
+.optList {
+  background: #f0f0f0;
+  padding: 20px 10px 0 40px;
+  font-size: 28px;
+  display: flex;
+  flex-wrap: wrap;
+  span {
+    width: auto;
+    color: #777;
+    padding: 15px 20px;
+    border: 1px solid rgba(119,119,119,.2);
+    border-radius: 20px;
+    margin: 0;
+    display: flex;
+    margin: 0 32px 24px 0;
+  }
+  slot {
+    display: inline-block;
+  }
+  i {
+    display: inline-block;
+    width: 0;
+    height: 0;
+    padding-right: 48px;
+    padding-bottom: 48px;
+    vertical-align: middle;
+    margin: -2px -10px -10px 2px;
+    &:before, &:after {
+      position: absolute;
+      content: '';
+      display: block;
+      width: 28px;
+      height: 0;
+      border-top: 3px solid #9d9d9d;
+      transform: rotate(45deg) translate3d(20px, 10px, 0);
+    }
+    &:after {
+      transform: rotate(-45deg) translate3d(-10px, 20px, 0);
+    }
+  }
+}
+
+// allView --------
+.allView {
+  margin-bottom: 200px;
+}

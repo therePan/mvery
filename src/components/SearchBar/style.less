@@ -1,0 +1,51 @@
+.SearchBarWrap{
+  background-color: #FF4F00;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  .bac{
+    background-color: inherit;
+    >div:last-child{
+      color: #fff;
+    }
+    >div:first-child{
+      border-radius: 16px;
+      >div{
+        text-align: left;
+        padding-left: 30px;
+      }
+    }
+    i {
+      background-image: url("../../static/usearch@3x.png");
+    }
+  }
+}
+.paddingAdd{
+  padding: 0 30px;
+}
+.leftContant{
+  width: 140px;
+  color: #fff;
+  display: flex;
+  align-items: end;
+  justify-content: space-around;
+  font-size: 34px;
+  padding-left: 16px;
+  >div{
+    >div{
+      width: 100px;
+      overflow: hidden;
+      text-overflow:ellipsis;
+      white-space: nowrap;
+    }
+  }
+  img{
+    width: 34px;
+    height: 34px;
+  }
+}
+.search{
+  flex: 1;
+  width: 0;
+}

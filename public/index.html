@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="zh-cn">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="theme-color" content="#000000">
+    <!--
+      manifest.json provides metadata used when your web app is added to the
+      homescreen on Android. See https://developers.google.com/web/fundamentals/engage-and-retain/web-app-manifest/
+    -->
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json">
+    <link rel="shortcut icon" href="%PUBLIC_URL%/favicon.ico">
+    <!--
+      Notice the use of %PUBLIC_URL% in the tags above.
+      It will be replaced with the URL of the `public` folder during the build.
+      Only files inside the `public` folder can be referenced from the HTML.
+
+      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
+      work correctly both with client-side routing and a non-root public URL.
+      Learn how to configure a non-root public URL by running `npm run build`.
+    -->
+    <title>最近东方--触屏版</title>
+    <meta name="msapplication-tap-highlight" content="no">
+    <script>
+      (function (baseFontSize, fontscale) {
+        var _baseFontSize = baseFontSize || 100;
+        var _fontscale = fontscale || 1;
+        var win = window;
+        var doc = win.document;
+        var ua = navigator.userAgent;
+        var matches = ua.match(/Android[\S\s]+AppleWebkit\/(\d{3})/i);
+        var UCversion = ua.match(/U3\/((\d+|\.){5,})/i);
+        var isUCHd = UCversion && parseInt(UCversion[1].split('.').join(''), 10) >= 80;
+        var isIos = navigator.appVersion.match(/(iphone|ipad|ipod)/gi);
+        var dpr = win.devicePixelRatio || 1;
+        if (!isIos && !(matches && matches[1] > 534) && !isUCHd) {
+          // 如果非iOS, 非Android4.3以上, 非UC内核, 就不执行高清, dpr设为1;
+          dpr = 1;
+        }
+        var scale = 1 / dpr;
+  
+        var metaEl = doc.querySelector('meta[Name="viewport"]');
+        if (!metaEl) {
+          metaEl = doc.createElement('meta');
+          metaEl.setAttribute('name', 'viewport');
+          doc.head.appendChild(metaEl);
+        }
+        metaEl.setAttribute('content',
+          'width=device-width,user-scalable=no,initial-scale=' +
+          scale + ',maximum-scale=' + scale + ',minimum-scale=' + scale);
+        doc.documentElement.style.fontSize = _baseFontSize / 2 * dpr * _fontscale + 'px';
+      })();
+    </script>
+
+    <!-- <link rel="stylesheet" href="//cdn.bootcss.com/normalize/7.0.0/normalize.min.css"> -->
+    <!-- <link rel="stylesheet" href="//cdn.bootcss.com/antd-mobile/2.0.0-beta.3/antd-mobile.min.css"> -->
+    <style>
+      #root {
+        height: 100%;
+      }
+      input,button,select,textarea{
+        outline:none;
+        border: none;
+      }
+      textarea{
+        resize:none;
+      }
+    </style>
+  </head>
+  <body>
+    <noscript>
+      You need to enable JavaScript to run this app.
+    </noscript>
+    <div id="root"></div>
+    <!--
+      This HTML file is a template.
+      If you open it directly in the browser, you will see an empty page.
+
+      You can add webfonts, meta tags, or analytics to this file.
+      The build step will place the bundled scripts into the <body> tag.
+
+      To begin the development, run `npm start` or `yarn start`.
+      To create a production bundle, use `npm run build` or `yarn build`.
+    -->
+
+    <!-- polyfill -->
+    <script src="//cdn.bootcss.com/es6-promise/4.1.1/es6-promise.auto.js"></script>
+    <script src="//cdn.bootcss.com/fetch/2.0.3/fetch.js"></script>
+    <script src="//cdn.bootcss.com/clipboard.js/1.7.1/clipboard.min.js"></script>
+    <script src="//cdn.bootcss.com/moment.js/2.19.0/moment.min.js"></script>
+    <script src="//cdn.bootcss.com/moment.js/2.19.0/locale/zh-cn.js"></script>
+
+    <!-- <script src="//cdn.bootcss.com/react/16.0.0/umd/react.production.min.js"></script>
+    <script src="//cdn.bootcss.com/react-dom/16.0.0/umd/react-dom.production.min.js"></script> -->
+    <script src="//cdn.bootcss.com/react/16.0.0/umd/react.development.js"></script>
+    <script src="//cdn.bootcss.com/react-dom/16.0.0/umd/react-dom.development.js"></script>
+    
+    <script src="//cdn.bootcss.com/prop-types/15.6.0/prop-types.js"></script>
+
+    <script src="//cdn.bootcss.com/react-router-dom/4.2.2/react-router-dom.js"></script>
+
+    <!-- store -->
+    <script src="//cdn.bootcss.com/redux/3.7.2/redux.js"></script>
+    <script src="//cdn.bootcss.com/redux-thunk/2.2.0/redux-thunk.js"></script>
+    <script src="//cdn.bootcss.com/react-redux/5.0.6/react-redux.js"></script>
+
+    <script src="//cdn.bootcss.com/blueimp-md5/2.10.0/js/md5.js"></script>
+    <script src="//cdn.bootcss.com/store.js/1.3.20/store.js"></script>
+    <script src="//cdn.bootcss.com/js-cookie/latest/js.cookie.js"></script>
+
+    <script src="//api.map.baidu.com/api?v=2.0&ak=a4izOFN6pDpKi5ni1chTavgsv8rN6aMa"></script>
+    <!-- <script src="/teddy.js"></script> -->
+  </body>
+</html>
